@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: 'Milligram-trial';
+  src: url('../public/fonts/Milligram-Medium-trial.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Milligram-Regular-trial';
+  src: url('../public/fonts/Milligram-Regular-trial.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'RightGrotesk';
+  src: url('../public/fonts/RightGrotesk-Medium.otf') format('truetype');
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #1f1f1f;
+  /* --main: #dddce2; */
+  --main: #efefef;
+}
+
+
+@theme  {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-milligram: 'Milligram-trial', Arial, Helvetica, sans-serif;
+  --font-Milligram-Regular-trial: 'Milligram-Regular-trial', Arial, Helvetica, sans-serif;
+  --font-RightGrotesk: 'RightGrotesk', Arial, Helvetica, sans-serif;
+  --color-primary: #da262c;
+
+}
+
+html, body {
+  scroll-behavior: auto !important;
+  overscroll-behavior: none;
+}
+
+
+body {
+  background: var(--main);
+  color: var(--foreground);
+  font-family: var(--font-Milligram-Regular-trial), Arial, Helvetica, sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+
+::selection {
+  @apply bg-[#e6ba2c] text-black; /* Your selection style */
+}
+
+img {
+  user-select: none; /* Prevent image selection */
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none; /* For Firefox */
+  
+}
+
+
+
+
+@layer components{
+    .flex-between{
+        @apply flex justify-between items-center
+    }
+    .flex-center{
+      @apply flex justify-center items-center
+    }
+}
+
+/* overLaping animation */
+.link-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+.link-text,
+.link-text-clone {
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.link-text-clone {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.link-wrapper:hover .link-text {
+  transform: translateY(-100%);
+}
+
+.link-wrapper:hover .link-text-clone {
+  transform: translateY(-100%);
+}
+
+
+
+.line::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: .5px;
+  background-color: #da262c;
+  transition: width 0.3s ease;
+}
+.line-box:hover .line::before {
+  width: 100%;
+}
+

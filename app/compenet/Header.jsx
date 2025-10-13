@@ -165,7 +165,7 @@ const Header = () => {
             animate="open"
             exit="closed"
             variants={menuVariants}
-            className="fixed right-0 mx-auto px-7 hidden max-md:flex flex-col gap-9 pt-[180px] top-0 left-0 w-full h-full bg-[#efefef] z-10"
+            className="fixed inset-0 overflow-hidden mx-auto px-7 hidden max-md:flex flex-col gap-9 pt-[180px] left-0 w-svw h-svh bg-[#efefef] z-[500]"
           >
             {NavLinks.map((link, index) => (
               <MenuLink

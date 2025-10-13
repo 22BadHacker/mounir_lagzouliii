@@ -1,44 +1,94 @@
 @import "tailwindcss";
 
+/* ==========================================================================
+   Font Definitions
+   ========================================================================== */
 
 @font-face {
   font-family: 'Milligram-trial';
   src: url('../public/fonts/Milligram-Medium-trial.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Milligram-Regular-trial';
   src: url('../public/fonts/Milligram-Regular-trial.ttf') format('truetype');
+  font-display: swap;
 }
+
 @font-face {
   font-family: 'RightGrotesk';
   src: url('../public/fonts/RightGrotesk-Medium.otf') format('truetype');
+  font-display: swap;
 }
+
+/* ==========================================================================
+   CSS Custom Properties (Variables)
+   ========================================================================== */
 
 :root {
   --background: #ffffff;
   --foreground: #1f1f1f;
-  /* --main: #dddce2; */
   --main: #efefef;
+  --primary-color: #da262c;
+  --accent-color: #e6ba2c;
 }
 
+/* ==========================================================================
+   Theme Configuration
+   ========================================================================== */
 
-@theme  {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary-color);
+  
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-milligram: 'Milligram-trial', Arial, Helvetica, sans-serif;
   --font-Milligram-Regular-trial: 'Milligram-Regular-trial', Arial, Helvetica, sans-serif;
   --font-RightGrotesk: 'RightGrotesk', Arial, Helvetica, sans-serif;
-  --color-primary: #da262c;
-  /* --breakpoint-*: initial;
-  --breakpoint-tablet: 40rem;
-  --breakpoint-laptop: 64rem;
-  --breakpoint-desktop: 80rem; */
 }
 
 
+
+/* ==========================================================================
+   Scrollbar Styles
+   ========================================================================== */
+
+/* Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+  /* border-radius: 0px; */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #000;
+}
+
+
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #000 transparent;
+}
+
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+
+html, body {
+  scroll-behavior: auto !important;
+  overscroll-behavior: none;
+}
 
 body {
   background: var(--main);
@@ -47,46 +97,76 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
+/* ==========================================================================
+   Selection Styles
+   ========================================================================== */
 
 ::selection {
-  @apply bg-[#e6ba2c] text-black; /* Your selection style */
+  background-color: var(--accent-color);
+  color: #000000;
 }
+
+::-moz-selection {
+  background-color: var(--accent-color);
+  color: #000000;
+}
+
+/* ==========================================================================
+   Image Styles
+   ========================================================================== */
 
 img {
-  user-select: none; /* Prevent image selection */
-  -webkit-user-select: none; /* For Safari */
-  -moz-user-select: none; /* For Firefox */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* ==========================================================================
+   Utility Components
+   ========================================================================== */
+
+@layer components {
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
   
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  
+  .flex-start {
+    @apply flex justify-start items-center;
+  }
+  
+  .flex-end {
+    @apply flex justify-end items-center;
+  }
 }
 
+/* ==========================================================================
+   Link Animation Styles
+   ========================================================================== */
 
-
-
-@layer components{
-    .flex-between{
-        @apply flex justify-between items-center
-    }
-    .flex-center{
-      @apply flex justify-center items-center
-    }
-}
-
-/* overLaping animation */
 .link-wrapper {
   position: relative;
   display: inline-block;
   overflow: hidden;
+  cursor: pointer;
 }
+
 .link-text,
 .link-text-clone {
   display: block;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
 }
 
 .link-text-clone {
   position: absolute;
   top: 100%;
   left: 0;
+  width: 100%;
 }
 
 .link-wrapper:hover .link-text {
@@ -97,19 +177,75 @@ img {
   transform: translateY(-100%);
 }
 
+/* ==========================================================================
+   Line Animation Styles
+   ========================================================================== */
 
+.line {
+  position: relative;
+  overflow: hidden;
+}
 
-.line::before{
+.line::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 0;
-  height: .5px;
-  background-color: #da262c;
-  transition: width 0.3s ease;
+  height: 0.5px;
+  background-color: var(--primary-color);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .line-box:hover .line::before {
   width: 100%;
 }
 
+/* ==========================================================================
+   Focus States (Accessibility)
+   ========================================================================== */
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Reduced Motion Support
+   ========================================================================== */
+
+
+
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
+
+@media print {
+  .link-wrapper {
+    overflow: visible;
+  }
+  
+  .link-text-clone {
+    display: none;
+  }
+}
+
+
+.full-screen-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.8);
+  /* Prevent scrolling on body when overlay is open */
+  overflow: hidden;
+}
+
+body.overlay-active {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}

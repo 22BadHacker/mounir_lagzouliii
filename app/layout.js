@@ -1,5 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import LenisWrapper from "@/components/LenisWrapper";
+import Header from "./compenet/Header";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,9 +23,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} w-full  z-10  ${geistMono.variable} antialiased`}
       >
-        {children}
+        <SpeedInsights />
+        <LenisWrapper>
+          <Header />
+          {children}
+        </LenisWrapper>
       </body>
     </html>
   );
