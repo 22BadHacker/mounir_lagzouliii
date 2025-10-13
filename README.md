@@ -1,37 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌐 Mounir Lagzouli — Portfolio
 
-## Getting Started
+Welcome to my personal portfolio website — [mounir-lagzouli.vercel.app](https://mounir-lagzouli.vercel.app)  
+A space where **design meets development**, and creativity blends with clean, interactive code.
 
-First, run the development server:
+---
+
+## ✨ Overview
+
+I’m **Mounir Lagzouli**, a **Graphic Designer** and **Full Stack Web Developer** who loves crafting digital experiences that merge **aesthetic design, smooth motion, and meaningful interaction**.  
+This portfolio showcases my work — from web development projects to creative visuals — all built with a focus on performance, animation, and storytelling.
+
+---
+
+
+## 💼 About Me
+
+I’m a multidisciplinary creative who believes every pixel and every line of code has a story to tell.
+My approach combines design thinking, aesthetic precision, and technical execution — resulting in immersive, intuitive, and expressive digital experiences.
+
+📍 Based in Morocco
+🎨 Graphic Designer | 💻 Full Stack Developer
+📧 mailto:mounirlagzouli22@gmail.com
+
+
+---
+
+
+## 🧩 Showcase
+
+You can explore my latest projects directly on
+👉 (https://mounir-lagzouli.vercel.app/projects)
+
+Each project reflects a mix of creativity, interactivity, and clean UI/UX execution.
+
+
+
+----
+
+
+
+## 🌟 Connect With Me
+
+Behance
+
+LinkedIn
+
+Instagram
+
+Email
+
+
+## 🎨 Features
+
+- ⚡ Built with **Next.js + React** for high performance and scalability  
+- 🎬 **Smooth scroll and motion effects** powered by **Lenis** and **Framer Motion**  
+- 💎 **Minimal & modern design** with a focus on typography and layout  
+- 📱 Fully **responsive** for all screen sizes  
+- 🧩 **Modular components** and reusable sections  
+- 🖼️ Integrated **project showcase** and **about section** with visual storytelling  
+
+---
+
+## 🧠 Tech Stack
+
+| Category | Technologies |
+|-----------|---------------|
+| Framework | [Next.js](https://nextjs.org/) |
+| Library | [React](https://react.dev/) |
+| Styling | [Tailwind CSS](https://tailwindcss.com/) |
+| Animation | [Framer Motion](https://www.framer.com/motion/), [Lenis](https://github.com/studio-freight/lenis) |
+| Deployment | [Vercel](https://vercel.com/) |
+
+---
+
+## 🚀 Getting Started
+
+Clone the repository and install dependencies.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-"# mounir_lagzouliii" 
+git clone https://github.com/yourusername/portfolio.git
+cd portfolio
+npm install
