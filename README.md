@@ -41,13 +41,13 @@ Each project reflects a mix of creativity, interactivity, and clean UI/UX execut
 
 ## 🌟 Connect With Me
 
-Behance
+🎨 Behance
 
 LinkedIn
 
 Instagram
 
-Email
+mailto:mounirlagzouli22@gmail.com
 
 
 ## 🎨 Features
