@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 @import "tailwindcss";
 
 /* ==========================================================================
@@ -28,7 +29,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #1f1f1f;
+  --foreground: #11120d;
   --main: #efefef;
   --primary-color: #da262c;
   --accent-color: #e6ba2c;
@@ -48,6 +49,7 @@
   --font-milligram: 'Milligram-trial', Arial, Helvetica, sans-serif;
   --font-Milligram-Regular-trial: 'Milligram-Regular-trial', Arial, Helvetica, sans-serif;
   --font-RightGrotesk: 'RightGrotesk', Arial, Helvetica, sans-serif;
+  --font-DMSerifDisplay: 'DM Serif Display', serif, Helvetica, sans-serif;
 }
 
 
@@ -130,6 +132,10 @@ img {
   .flex-between {
     @apply flex justify-between items-center;
   }
+
+  .flex-size{
+    @apply max-w-[1680px] px-6 mx-auto w-full 
+  }
   
   .flex-center {
     @apply flex justify-center items-center;
@@ -153,6 +159,7 @@ img {
   display: inline-block;
   overflow: hidden;
   cursor: pointer;
+  
 }
 
 .link-text,

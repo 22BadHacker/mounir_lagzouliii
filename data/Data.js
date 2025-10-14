@@ -1,7 +1,7 @@
 export const NavLinks = [
     {
         title: 'About',
-        url: '/about'
+        url: '/'
     },
     {
         title: 'Projects',

@@ -2,7 +2,6 @@
 import React, { useRef, useState, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import { FaPlay, FaPause } from "react-icons/fa6"
 import { AnimatePresence, motion } from 'framer-motion'
 import Logo from '@/public/Logo/Mounir_Lagzouli_1.svg'
@@ -25,14 +24,12 @@ const MusicPlayer = ({ isPlaying, onToggle }) => (
 )
 
 // Menu Link Component
-const MenuLink = ({ href, title, index, onClick, isActive }) => (
+const MenuLink = ({ href, title, index, onClick }) => (
   <div className="flex line-box flex-col gap-1">
     <Link
       href={href}
       onClick={onClick}
-      className={`w-full font-Milligram-Regular-trial flex-between text-[40px] tracking-[.08px] duration-200 transition-colors ${
-        isActive ? 'text-[#da262c]' : 'hover:text-[#da262c]'
-      }`}
+      className="w-full font-Milligram-Regular-trial flex-between text-[40px] tracking-[.08px] duration-200 hover:text-[#da262c] transition-colors"
     >
       {title}
       <span className="font-RightGrotesk num text-[18px] opacity-80">0
@@ -44,14 +41,8 @@ const MenuLink = ({ href, title, index, onClick, isActive }) => (
 )
 
 // Desktop Nav Link Component
-const DesktopNavLink = ({ href, title, isActive }) => (
-  <Link 
-    href={href} 
-    className={`link-wrapper  px-[.5px] text-[14px] tracking-[.08px] h-[20px] hover:text-primary ${
-      isActive ? 'text-primary' : ''
-    }`}
-  >
-    
+const DesktopNavLink = ({ href, title }) => (
+  <Link href={href} className="link-wrapper text-[14px] tracking-[.08px] h-[20px] hover:text-primary">
     <span className="link-text relative -top-[0.5px]">{title}</span>
     <span className="link-text-clone mt-[0.4px]">{title}</span>
   </Link>
@@ -99,7 +90,6 @@ const Header = () => {
   const audioRef = useRef(null)
   const [isPlaying, setIsPlaying] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const pathname = usePathname()
 
   const toggleMusic = useCallback(() => {
     if (!audioRef.current) return
@@ -160,8 +150,7 @@ const Header = () => {
               <DesktopNavLink 
                 key={index} 
                 href={link.url} 
-                title={link.title}
-                isActive={pathname === link.url}
+                title={link.title} 
               />
             ))}
           </div>
@@ -185,7 +174,6 @@ const Header = () => {
                 title={link.title}
                 index={index}
                 onClick={closeMenu}
-                isActive={pathname === link.url}
               />
             ))}
           </motion.div>
