@@ -9,6 +9,7 @@ const page = () => {
   return (
     <div className='flex-size'>
         <Projects />
+        
     </div>
   )
 }

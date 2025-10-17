@@ -1,103 +1,199 @@
 'use client'
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useCallback } from 'react'
 import Image from 'next/image'
-import Logo from '@/public/Logo/Mounir_Lagzouli_1.svg'
-import Loogo from '@/public/Logo/Mounir_Lagzouli_Red.svg'
 import Link from 'next/link'
-import { NavLinks } from '@/data/Data'
-import { FaPlay, FaPause } from "react-icons/fa6";
+import { usePathname } from 'next/navigation'
+import { FaPlay, FaPause } from "react-icons/fa6"
 import { AnimatePresence, motion } from 'framer-motion'
+import Logo from '@/public/Logo/Mounir_Lagzouli_1.svg'
+import LogoRed from '@/public/Logo/Mounir_Lagzouli_Red.svg'
+import { NavLinks } from '@/data/Data'
+
+// Music Player Component
+const MusicPlayer = ({ isPlaying, onToggle }) => (
+  <button
+    onClick={onToggle}
+    aria-label={isPlaying ? 'Pause music' : 'Play music'}
+    className="flex active:scale-95 cursor-pointer text-[15px] items-center justify-center h-[30px] w-[42px] bg-[#efefef] transition-all duration-200 hover:bg-[#e5e5e5] "
+  >
+    {isPlaying ? (
+      <FaPause className="text-[17px]" aria-hidden="true" />
+    ) : (
+      <FaPlay aria-hidden="true" />
+    )}
+  </button>
+)
+
+// Menu Link Component
+const MenuLink = ({ href, title, index, onClick, isActive }) => (
+  <div className="flex line-box flex-col gap-1">
+    <Link
+      href={href}
+      onClick={onClick}
+      className={`w-full font-Milligram-Regular-trial flex-between text-[40px] tracking-[.08px] duration-200 transition-colors ${
+        isActive ? 'text-[#da262c]' : 'hover:text-[#da262c]'
+      }`}
+    >
+      {title}
+      <span className="font-RightGrotesk num text-[18px] opacity-80">0
+        {String(index + 1).padStart(2, '0')}
+      </span>
+    </Link>
+    <div className="w-full line relative h-[0.5px] bg-[#d4d4d4]" />
+  </div>
+)
+
+// Desktop Nav Link Component
+const DesktopNavLink = ({ href, title, isActive }) => (
+  <Link 
+    href={href} 
+    className={`link-wrapper  px-[.5px] text-[14px] tracking-[.08px] h-[20px] hover:text-primary ${
+      isActive ? 'text-primary' : ''
+    }`}
+  >
+    
+    <span className="link-text relative -top-[0.5px]">{title}</span>
+    <span className="link-text-clone mt-[0.4px]">{title}</span>
+  </Link>
+)
+
+// Mobile Menu Toggle Component
+const MobileMenuToggle = ({ isMenuOpen, onToggle }) => (
+  <button
+    onClick={onToggle}
+    aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+    className="link-wrapper cursor-pointer text-[14px] tracking-[.08px] h-[20px] hover:text-primary"
+  >
+    <span className="link-text relative -top-[0.5px]">
+      {isMenuOpen ? 'Close' : 'Menu'}
+    </span>
+    <span className="link-text-clone mt-[0.4px]">
+      {isMenuOpen ? 'Close' : 'Menu'}
+    </span>
+  </button>
+)
+
+// Logo Component
+const HeaderLogo = () => (
+  <Link href="/" className="h-[20px] link-wrapper">
+    <Image 
+      alt="Mounir Lagzouli" 
+      src={Logo} 
+      width={100} 
+      height={100} 
+      className="w-[185px] relative top-[1px] link-text"
+      priority
+    />
+    <Image 
+      alt="Mounir Lagzouli" 
+      src={LogoRed} 
+      width={100} 
+      height={100} 
+      className="w-[185px] pb-[5.5px] link-text-clone"
+      priority
+    />
+  </Link>
+)
 
 const Header = () => {
-  const audioRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-   const [clicking, setClicking] = useState(false);
-   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const audioRef = useRef(null)
+  const [isPlaying, setIsPlaying] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname()
 
-   const toggleMusic = () => {
-    if (!audioRef.current) return;
+  const toggleMusic = useCallback(() => {
+    if (!audioRef.current) return
 
     if (isPlaying) {
-      audioRef.current.pause();
+      audioRef.current.pause()
     } else {
-      audioRef.current.play();
+      audioRef.current.play().catch(error => {
+        console.error('Error playing audio:', error)
+      })
     }
 
-    setIsPlaying(!isPlaying);
-  };
+    setIsPlaying(!isPlaying)
+  }, [isPlaying])
 
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen(prev => !prev)
+  }, [])
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const closeMenu = useCallback(() => {
+    setIsMenuOpen(false)
+  }, [])
+
+  const menuVariants = {
+    closed: {
+      opacity: 0,
+      transition: {
+        duration: 0.3,
+        ease: 'easeInOut'
+      }
+    },
+    open: {
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+        ease: 'easeInOut',
+        delay: 0.3
+      }
+    }
   }
 
   return (
-
     <>
-      <div className='py-5 fixed  top-0 left-0 right-0 w-screen z-[999] max-w-[1680px] px-6 mx-auto  flex-between'>
-
-          <Link href={'/'} className='h-[20px] link-wrapper '>
-              <Image alt='Mounir Lagzouli'  src={Logo} width={100} height={100} className='w-[185px] relative top-[1px] link-text'/>
-              <Image alt='Mounir Lagzouli'  src={Loogo} width={100} height={100} className='w-[185px] pb-[5.5px]  link-text-clone'/>
-          </Link>
-
-          <div className={`flex-center transition-[all] duration-[.4s] ease-in-out  font-light bg-[#fcfcfc] max-md:w-[110px] max-md:gap-6 w-fit py-[6px] px-[9px] gap-7`}>
-
-              <div  onClick={toggleMusic} className="flex  active:scale-[.85] active:blur-2xl cursor-pointer text-[15px] flex-center h-[30px] w-[38px] bg-[#efefef]">
-                  <audio ref={audioRef} src="/music/intro2.mp3" loop />
-                  {
-                    isPlaying ? <FaPause className='text-[17px]'/> : <FaPlay />
-                  }
-              </div>
-
-              {/* menu Toggle */}
-
-              <div onClick={toggleMenu} className="hidden max-md:flex">
-                  <p  className='link-wrapper  cursor-pointer text-[14px] tracking-[.08px]   h-[20px]  hover:text-primary' >
-                      <p className=' link-text relative -top-[.5px]'>{isMenuOpen ? 'Close' : 'Menu'}</p>
-                      <p className=' link-text-clone mt-[.4px]   ' >{isMenuOpen ? 'Close' : 'Menu'}</p>
-                  </p>
-              </div>
-
-
-              {/* Main Nav Links */}
-              <div className="max-md:hidden gap-7  flex-center">
-                  {
-                    NavLinks.map((i, link) => (
-                      <Link key={link} href={i.url} className='link-wrapper   text-[14px] tracking-[.08px]   h-[20px]  hover:text-primary' >
-                        <p className=' link-text relative -top-[.5px] ' >{i.title}</p>
-                        <p className=' link-text-clone mt-[.4px]   ' >{i.title}</p>
-                      </Link>
-                    ))
-                  }
-
-              </div>
-
+      <header className="py-5 fixed top-0 left-0 right-0 w-screen z-[999] max-w-[1680px] px-6 mx-auto flex-between">
+        <HeaderLogo />
+        
+        <nav className="flex-center transition-all duration-400 ease-in-out font-light bg-[#fcfcfc]/80 backdrop-blur-[5px]  max-md:w-[115px] max-md:gap-6 w-fit py-[6px] px-[9px] gap-6">
+          <MusicPlayer isPlaying={isPlaying} onToggle={toggleMusic} />
+          
+          {/* Mobile Menu Toggle */}
+          <div className="hidden max-md:flex">
+            <MobileMenuToggle isMenuOpen={isMenuOpen} onToggle={toggleMenu} />
           </div>
-      </div>
 
+          {/* Desktop Navigation */}
+          <div className="max-md:hidden gap-6 flex-center">
+            {NavLinks.map((link, index) => (
+              <DesktopNavLink 
+                key={index} 
+                href={link.url} 
+                title={link.title}
+                isActive={pathname === link.url}
+              />
+            ))}
+          </div>
+        </nav>
+      </header>
+
+      {/* Mobile Menu */}
       <AnimatePresence>
-        {
-          isMenuOpen && (
-            <motion.div exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{duration: .3, ease: 'easeInOut', delay: .3 }} className="fixed right-0 max-auto px-7 hidden max-md:flex flex-col gap-9 pt-[180px] top-0 left-0 w-full h-full bg-[#efefef] opacity-100 z-10">
-              
-                {
-                    NavLinks.map((i, link) => (
-                        <div className='flex line-box flex-col gap-1'>
-                            <Link key={link} href={i.url} className=' w-full font-Milligram-Regular-trial   flex-between  text-[40px] tracking-[.08px] duration-[.2s] hover:text-[#da262c]' > {i.title} <span className='font-RightGrotesk text-[18px] opacity-80'>00{link+1} </span>
-                            </Link>
-
-                            <div className="w-full relative line h-[.5px] bg-[#d4d4d4]"></div>
-                        </div>
-                    ))
-                  }
-            </motion.div>
-          )
-        }
-
+        {isMenuOpen && (
+          <motion.div
+            initial="closed"
+            animate="open"
+            exit="closed"
+            variants={menuVariants}
+            className="fixed inset-0 overflow-hidden mx-auto px-7 hidden max-md:flex flex-col gap-9 pt-[180px] left-0 w-svw h-svh bg-[#efefef] z-[500]"
+          >
+            {NavLinks.map((link, index) => (
+              <MenuLink
+                key={index}
+                href={link.url}
+                title={link.title}
+                index={index}
+                onClick={closeMenu}
+                isActive={pathname === link.url}
+              />
+            ))}
+          </motion.div>
+        )}
       </AnimatePresence>
-      
 
+      {/* Hidden Audio Element */}
+      <audio ref={audioRef} src="/music/intro2.mp3" loop />
     </>
   )
 }

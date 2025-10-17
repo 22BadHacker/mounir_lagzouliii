@@ -3,6 +3,7 @@ import "./globals.css";
 import LenisWrapper from "@/components/LenisWrapper";
 import Header from "./compenet/Header";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import Footer from "./compenet/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,12 +24,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} w-full  z-10  ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} h-auto w-full z-10  ${geistMono.variable} antialiased`}
       >
         <SpeedInsights />
         <LenisWrapper>
           <Header />
           {children}
+          {/* <footer style={{clipPath: 'polygon(0% 0, 100% 0%, 100% 100%, 0% 100%)'}} className="w-full h-[640px] relative ">
+            <div className="fixed flex bottom-0 w-full h-[500px]">
+              <h1>hellloooid</h1>
+            </div>
+          </footer> */}
+              <Footer />
         </LenisWrapper>
       </body>
     </html>

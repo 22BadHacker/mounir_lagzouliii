@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 /* ==========================================================================
@@ -50,6 +51,7 @@
   --font-Milligram-Regular-trial: 'Milligram-Regular-trial', Arial, Helvetica, sans-serif;
   --font-RightGrotesk: 'RightGrotesk', Arial, Helvetica, sans-serif;
   --font-DMSerifDisplay: 'DM Serif Display', serif, Helvetica, sans-serif;
+  --font-Archivo: 'Archivo', sans-serif;
 }
 
 
@@ -68,19 +70,19 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #000;
+  background: #161616;
   /* border-radius: 0px; */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #000;
+  background: #8a8a8a;
 }
 
 
 
 html {
   scrollbar-width: thin;
-  scrollbar-color: #000 transparent;
+  scrollbar-color: #8a8a8a transparent;
 }
 
 /* ==========================================================================
@@ -134,7 +136,7 @@ img {
   }
 
   .flex-size{
-    @apply max-w-[1680px] px-6 mx-auto w-full 
+    @apply max-w-[1670px] px-6 mx-auto w-full 
   }
   
   .flex-center {
@@ -178,6 +180,7 @@ img {
 
 .link-wrapper:hover .link-text {
   transform: translateY(-100%);
+  
 }
 
 .link-wrapper:hover .link-text-clone {

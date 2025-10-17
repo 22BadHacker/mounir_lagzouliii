@@ -14,7 +14,7 @@ const MusicPlayer = ({ isPlaying, onToggle }) => (
   <button
     onClick={onToggle}
     aria-label={isPlaying ? 'Pause music' : 'Play music'}
-    className="flex active:scale-95 cursor-pointer text-[15px] items-center justify-center h-[30px] w-[42px] bg-[#efefef] transition-all duration-200 hover:bg-[#e5e5e5] "
+    className="flex active:scale-95 cursor-pointer text-[15px] items-center justify-center h-[30px] w-[47px] bg-[#efefef] transition-all duration-200 hover:bg-[#e5e5e5]"
   >
     {isPlaying ? (
       <FaPause className="text-[17px]" aria-hidden="true" />
@@ -23,6 +23,7 @@ const MusicPlayer = ({ isPlaying, onToggle }) => (
     )}
   </button>
 )
+
 
 // Menu Link Component
 const MenuLink = ({ href, title, index, onClick, isActive }) => (
@@ -47,13 +48,13 @@ const MenuLink = ({ href, title, index, onClick, isActive }) => (
 const DesktopNavLink = ({ href, title, isActive }) => (
   <Link 
     href={href} 
-    className={`link-wrapper  px-[.5px] text-[14px] tracking-[.08px] h-[20px] hover:text-primary ${
+    className={`link-wrapper  px-[.5px] text-[12.6px] font-[400]  font-Archivo tracking-[.2px] h-[16px] hover:text-primary ${
       isActive ? 'text-primary' : ''
     }`}
   >
     
-    <span className="link-text relative -top-[0.5px]">{title}</span>
-    <span className="link-text-clone mt-[0.4px]">{title}</span>
+    <span className="link-text relative -top-[2.6px]">{title}</span>
+    <span className="link-text-clone mt-[.5px]">{title}</span>
   </Link>
 )
 
@@ -75,13 +76,13 @@ const MobileMenuToggle = ({ isMenuOpen, onToggle }) => (
 
 // Logo Component
 const HeaderLogo = () => (
-  <Link href="/" className="h-[20px] link-wrapper">
+  <Link href="/" className="h-[18px]  link-wrapper">
     <Image 
       alt="Mounir Lagzouli" 
       src={Logo} 
       width={100} 
       height={100} 
-      className="w-[185px] relative top-[1px] link-text"
+      className="w-[170px] relative top-[-.8px] link-text"
       priority
     />
     <Image 
@@ -89,7 +90,7 @@ const HeaderLogo = () => (
       src={LogoRed} 
       width={100} 
       height={100} 
-      className="w-[185px] pb-[5.5px] link-text-clone"
+      className="w-[170px]  pb-[4px] link-text-clone"
       priority
     />
   </Link>
@@ -143,10 +144,10 @@ const Header = () => {
 
   return (
     <>
-      <header className="py-5 fixed top-0 left-0 right-0 w-screen z-[999] max-w-[1680px] px-6 mx-auto flex-between">
+      <header className="py-[20px] transition-all duration-400 ease-in-out fixed top-0 left-0 right-0 w-screen z-[999] max-w-[1670px] px-6 mx-auto flex-between">
         <HeaderLogo />
         
-        <nav className="flex-center transition-all duration-400 ease-in-out font-light bg-[#fcfcfc]/80 backdrop-blur-[5px]  max-md:w-[115px] max-md:gap-6 w-fit py-[6px] px-[9px] gap-6">
+        <nav className="flex-center transition-all duration-400 ease-in-out font-light bg-[#fff]/80 backdrop-blur-[5px]  max-md:w-[115px] max-md:gap-6 w-fit py-[6px] px-[9px] gap-6">
           <MusicPlayer isPlaying={isPlaying} onToggle={toggleMusic} />
           
           {/* Mobile Menu Toggle */}
@@ -155,7 +156,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="max-md:hidden gap-6 flex-center">
+          <div className="max-md:hidden gap-[22px] flex-center">
             {NavLinks.map((link, index) => (
               <DesktopNavLink 
                 key={index} 
