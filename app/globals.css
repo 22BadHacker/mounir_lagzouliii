@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
 @import "tailwindcss";
 
 /* ==========================================================================
@@ -51,6 +52,7 @@
   --font-Milligram-Regular-trial: 'Milligram-Regular-trial', Arial, Helvetica, sans-serif;
   --font-RightGrotesk: 'RightGrotesk', Arial, Helvetica, sans-serif;
   --font-DMSerifDisplay: 'DM Serif Display', serif, Helvetica, sans-serif;
+  --font-Playfair: 'Playfair', serif, Helvetica, sans-serif;
   --font-Archivo: 'Archivo', sans-serif;
 }
 
@@ -75,14 +77,14 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #8a8a8a;
+  background: #161616;
 }
 
 
 
 html {
   scrollbar-width: thin;
-  scrollbar-color: #8a8a8a transparent;
+  scrollbar-color: #161616 transparent;
 }
 
 /* ==========================================================================

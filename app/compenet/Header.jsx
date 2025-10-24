@@ -31,8 +31,8 @@ const MenuLink = ({ href, title, index, onClick, isActive }) => (
     <Link
       href={href}
       onClick={onClick}
-      className={`w-full font-Milligram-Regular-trial flex-between text-[40px] tracking-[.08px] duration-200 transition-colors ${
-        isActive ? 'text-[#da262c]' : 'hover:text-[#da262c]'
+      className={`w-full  hover:text-[#da262c] font-Archivo flex-between text-[40px] tracking-[.08px] duration-200 transition-colors ${
+        isActive ? 'text-[#da262c]' : ''
       }`}
     >
       {title}
@@ -147,7 +147,7 @@ const Header = () => {
       <header className="py-[20px] transition-all duration-400 ease-in-out fixed top-0 left-0 right-0 w-screen z-[999] max-w-[1670px] px-6 mx-auto flex-between">
         <HeaderLogo />
         
-        <nav className="flex-center transition-all duration-400 ease-in-out font-light bg-[#fff]/80 backdrop-blur-[5px]  max-md:w-[115px] max-md:gap-6 w-fit py-[6px] px-[9px] gap-6">
+        <nav className="flex-center  transition-all duration-400 ease-in-out font-light bg-[#fff]/80 backdrop-blur-[5px]  max-md:w-[115px] max-md:gap-6 w-fit py-[6px] px-[9px] gap-6">
           <MusicPlayer isPlaying={isPlaying} onToggle={toggleMusic} />
           
           {/* Mobile Menu Toggle */}

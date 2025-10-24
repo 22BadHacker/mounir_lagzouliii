@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 369 545">
+  <defs>
+    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="20"/>
+      <feGaussianBlur result="blur" stdDeviation="8"/>
+      <feFlood flood-color="#231f20" flood-opacity=".08"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-2" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="20"/>
+      <feGaussianBlur result="blur-2" stdDeviation="8"/>
+      <feFlood flood-color="#231f20" flood-opacity=".08"/>
+      <feComposite in2="blur-2" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-3" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="7"/>
+      <feGaussianBlur result="blur-3" stdDeviation="15"/>
+      <feFlood flood-color="#5e5283" flood-opacity=".3"/>
+      <feComposite in2="blur-3" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-4" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="7"/>
+      <feGaussianBlur result="blur-4" stdDeviation="15"/>
+      <feFlood flood-color="#5e5283" flood-opacity=".3"/>
+      <feComposite in2="blur-4" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-5" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="7"/>
+      <feGaussianBlur result="blur-5" stdDeviation="15"/>
+      <feFlood flood-color="#5e5283" flood-opacity=".3"/>
+      <feComposite in2="blur-5" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="Dégradé_sans_nom_5" data-name="Dégradé sans nom 5" x1="262.07" y1="151.02" x2="228.16" y2="102.59" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".13" stop-color="#e0e3f0"/>
+      <stop offset=".44" stop-color="#a2abd3"/>
+      <stop offset=".69" stop-color="#7582be"/>
+      <stop offset=".89" stop-color="#5969b0"/>
+      <stop offset="1" stop-color="#4f60ac"/>
+    </linearGradient>
+    <linearGradient id="Dégradé_sans_nom_5-2" data-name="Dégradé sans nom 5" x1="186.36" y1="131.85" x2="186.36" y2="16.7" xlink:href="#Dégradé_sans_nom_5"/>
+    <linearGradient id="Dégradé_sans_nom_5-3" data-name="Dégradé sans nom 5" x1="110.65" y1="151.02" x2="144.56" y2="102.59" xlink:href="#Dégradé_sans_nom_5"/>
+  </defs>
+  <polygon points="70.01 397.82 187.52 340.24 305.02 397.82 187.52 455.39 70.01 397.82" fill="#f6ecf3" stroke-width="0"/>
+  <polygon points="305.02 397.82 305.02 445.3 187.52 502.87 187.52 455.39 305.02 397.82" fill="#ede7ef" filter="url(#drop-shadow-1)" stroke-width="0"/>
+  <polygon points="70.01 397.82 70.01 445.3 187.52 502.87 187.52 455.39 70.01 397.82" fill="#e7dfed" filter="url(#drop-shadow-2)" stroke-width="0"/>
+  <polygon id="_4-shadow" data-name="4-shadow" points="70.01 363.98 187.52 421.56 305.02 363.98 70.01 363.98" fill="#fff" filter="url(#drop-shadow-3)" stroke-width="0"/>
+  <g id="O4">
+    <polygon points="70.01 316.5 187.52 258.92 305.02 316.5 187.52 374.08 70.01 316.5" fill="#f6ecf3" stroke-width="0"/>
+    <polygon points="305.02 316.5 305.02 363.98 187.52 421.56 187.52 374.08 305.02 316.5" fill="#ede7ef" stroke-width="0"/>
+    <polygon points="70.01 316.5 70.01 363.98 187.52 421.56 187.52 374.08 70.01 316.5" fill="#e7dfed" stroke-width="0"/>
+  </g>
+  <polygon id="_3-shadow" data-name="3-shadow" points="69.43 267.46 186.94 325.04 304.44 267.46 69.43 267.46" fill="#fff" filter="url(#drop-shadow-4)" stroke-width="0"/>
+  <g id="O3">
+    <polygon points="69.43 219.98 186.94 162.4 304.44 219.98 186.94 277.56 69.43 219.98" fill="#f6ecf3" stroke-width="0"/>
+    <polygon points="304.44 219.98 304.44 267.46 186.94 325.04 186.94 277.56 304.44 219.98" fill="#ede7ef" stroke-width="0"/>
+    <polygon points="69.43 219.98 69.43 267.46 186.94 325.04 186.94 277.56 69.43 219.98" fill="#e7dfed" stroke-width="0"/>
+  </g>
+  <polygon id="_2-shadow" data-name="2-shadow" points="68.85 170.59 186.36 228.16 303.86 170.59 68.85 170.59" fill="#6a56a4" filter="url(#drop-shadow-5)" stroke-width="0"/>
+  <g id="O2">
+    <polygon points="68.85 123.11 186.36 65.53 303.86 123.11 186.36 180.68 68.85 123.11" fill="#766ab0" stroke-width="0"/>
+    <polygon points="303.86 123.11 303.86 170.59 186.36 228.16 186.36 180.68 303.86 123.11" fill="#7061ab" stroke-width="0"/>
+    <polygon points="68.85 123.11 68.85 170.59 186.36 228.16 186.36 180.68 68.85 123.11" fill="#6a56a4" stroke-width="0"/>
+  </g>
+  <g id="O1">
+    <polygon points="303.86 74.27 303.86 121.75 186.36 179.33 186.36 131.85 303.86 74.27" fill="url(#Dégradé_sans_nom_5)" opacity=".35" stroke-width="0"/>
+    <g>
+      <polygon points="68.85 74.27 186.36 16.7 303.86 74.27 186.36 131.85 68.85 74.27" fill="url(#Dégradé_sans_nom_5-2)" opacity=".2" stroke-width="0"/>
+      <polygon points="68.85 74.27 68.85 121.75 186.36 179.33 186.36 131.85 68.85 74.27" fill="url(#Dégradé_sans_nom_5-3)" opacity=".35" stroke-width="0"/>
+    </g>
+  </g>
+</svg>
