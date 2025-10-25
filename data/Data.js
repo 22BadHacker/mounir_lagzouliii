@@ -35,7 +35,7 @@ export const ProjectData = [
         title: 'Lenzóne Studio',
         file: Lenzone,
         tags: ['Branding', 'Logo Design', 'Chart Graphic'],
-        imgWidth: 'w-[230px]',
+        imgWidth: 'w-[225px]',
     },
      {
         title: 'Stüdyo',
@@ -54,19 +54,19 @@ export const ProjectData = [
         title: 'OUTLOUD',
         file: outloud,
         tags: ['Logo Design'],
-        imgWidth: 'w-[200px] opacity-95',
+        imgWidth: 'w-[195px] opacity-95',
     },
     {
         title: 'Be Point Prod',
         file: BeProd,
         tags: ['Logo Design', 'Business Card'],
-        imgWidth: 'w-[195px]',
+        imgWidth: 'w-[190px]',
     },
     {
         title: 'Megasoft',
         file: Megasoft,
         tags: ['Logo Design', 'Brand Identity'],
-        imgWidth: 'w-[300px] opacity-95',
+        imgWidth: 'w-[270px] opacity-95',
     },
     {
         title: 'Carrot',
@@ -78,7 +78,7 @@ export const ProjectData = [
         title: 'Drippp Studio',
         file: DripppStudio,
         tags: ['Logo Design'],
-        imgWidth: 'w-[230px] opacity-90',
+        imgWidth: 'w-[235px] opacity-90',
     },
    
 

@@ -144,7 +144,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="py-[20px] transition-all duration-400 ease-in-out fixed top-0 left-0 right-0 w-screen z-[999] max-w-[1670px] px-6 mx-auto flex-between">
+      <header className="py-[20px] transition-all duration-400 ease-in-out fixed top-0 left-0 right-0 w-full z-[999] max-w-[1670px] px-6 mx-auto flex-between">
         <HeaderLogo />
         
         <nav className="flex-center  transition-all duration-400 ease-in-out font-light bg-[#fff]/80 backdrop-blur-[5px]  max-md:w-[115px] max-md:gap-6 w-fit py-[6px] px-[9px] gap-6">
