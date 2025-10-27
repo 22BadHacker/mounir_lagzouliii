@@ -1,9 +1,4 @@
-import Header from '@/app/compenet/Header'
 import React from 'react'
-import Image from 'next/image'
-// import Mee from '@/public/image/Mee.png'
-// import Mee from '@/public/image/hero.mp4'
-
 
 const page = () => {
   return (
@@ -13,12 +8,10 @@ const page = () => {
 
             
             <div className="flex-size z-10 flex-col justify-between flex h-full">
-                <h1 className='text-[40px]  tracking-[1px]  text-[#161616]/95 leading-[1.1] text-pretty hidden sm:block  md:w-[700px]'>I design experiences that awaken curiosity and emotion. Every interface I craft is a <span className='font-DMSerifDisplay italic'>balance of beauty</span>, <span className='font-DMSerifDisplay italic'>clarity</span>, and <span className='font-DMSerifDisplay italic'>storytelling</span>.</h1>
+                <h1 className='text-[40px]  tracking-[1px]  text-[#161616]/95 leading-[1.1] text-pretty hidden sm:block  md:w-[700px]'>I design experiences that awaken curiosity and emotion. Every interface I craft is a <span className=' italic'>balance of beauty</span>, <span className=' italic'>clarity</span>, and <span className='italic'>storytelling</span>.</h1>
 
                 <div className="flex md:flex-row flex-col md:items-end gap-10 md:gap-2 justify-between w-full">
-                    <p className='md:w-[500px]  w-full tracking-[.4px]  text-pretty text-[22px] leading-[1.15] text-[#aeaeae]'> <span className='font-bold text-black text-[20px] relative -top-[2px]'>//</span> <span className='text-[#161616]/85 '>Graphic Designer</span> and <span className='text-[#161616]/85'>Developer</span>, crafting visuals and interfaces that speak through form, rhythm, and emotion.</p>
-
-                    {/* <Image priority alt='Mounir Lagzouli' className='object-cover  saturate-[1.2]' src={Mee} width={270} height={550}/> */}
+                    <p className='md:w-[500px]  w-full tracking-[.4px]  text-pretty text-[22px] leading-[1.15] text-[#aeaeae]'> <span className='size-[6px] inline-flex bg-black relative mr-1 -top-[4.5px]'></span> <span className='text-[#161616]/85 '>Graphic Designer</span> and <span className='text-[#161616]/85'>Developer</span>, crafting visuals and interfaces that speak through form, rhythm, and emotion.</p>
                     <video src='/image/hero.mp4'  autoPlay loop muted className='w-[240px] h-[390px] saturate-[1.2] object-cover'/>
                 </div>
             </div>
