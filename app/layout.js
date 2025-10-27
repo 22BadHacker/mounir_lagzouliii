@@ -1,9 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import LenisWrapper from "@/components/LenisWrapper";
-import Header from "./compenet/Header";
+import Header from "../components/Header";
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import Footer from "./compenet/Footer";
+import Footer from "../components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,12 +30,11 @@ export default function RootLayout({ children }) {
         <LenisWrapper>
           <Header />
           {children}
-          {/* <footer style={{clipPath: 'polygon(0% 0, 100% 0%, 100% 100%, 0% 100%)'}} className="w-full h-[640px] relative ">
-            <div className="fixed flex bottom-0 w-full h-[500px]">
-              <h1>hellloooid</h1>
+          <footer style={{clipPath: 'polygon(0% 0, 100% 0%, 100% 100%, 0% 100%)'}} className="w-full  flex h-svh relative ">
+            <div className="fixed flex bottom-0 w-full h-auto">
+                <Footer />
             </div>
-          </footer> */}
-              <Footer />
+          </footer>
         </LenisWrapper>
       </body>
     </html>

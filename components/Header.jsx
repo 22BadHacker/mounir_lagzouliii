@@ -10,6 +10,20 @@ import LogoRed from '@/public/Logo/Mounir_Lagzouli_Red.svg'
 import { NavLinks, Socials } from '@/data/Data'
 import { TfiArrowTopRight } from "react-icons/tfi";
 
+
+const SectionTitle = ({ children }) => (
+    <p className='uppercase cursor-pointer h-fit  leading-[1] w-fit flex items-center gap-[1.5px] font-Archivo font-semibold text-[12.5px]'>
+      {/* <span className='w-[4px] h-[4.5px] relative -top-[0.5px] bg-black' /> */}
+      <span className='h-full w-[3.5px] bg-amber-300'/>
+      <span className='h-full w-[2px] bg-amber-300'/>
+      <span className='h-full w-[1.5px] bg-amber-300'/>
+      <span className='h-full w-[2px] bg-amber-300'/>
+      <span className='bg-amber-300 px-[2px]'>{children}</span>
+    </p>
+  )
+
+  
+
 // Music Player Component
 const MusicPlayer = ({ isPlaying, onToggle }) => (
   <button
@@ -30,13 +44,13 @@ const MusicPlayer = ({ isPlaying, onToggle }) => (
 const MenuLink = ({ href, title, index, onClick, isActive }) => (
 
     <div className="flex flex-col">
-       <span className="font-Archivo num text-[10px] opacity-80">[00 - 
-          {String(index + 1).padStart(2, '0')} ]
+       <span className="font-Archivo flex gap-[4px] italic items-center tracking-wide num text-[9.5px] opacity-80"><span className='size-[3px] relative -top-[1px] bg-black'/>[00 - 
+          {String(index + 1).padStart(2, '0')}]
         </span>
       <Link
         href={href}
         onClick={onClick}
-        className={`w-full leading-[1.3]  hover:text-[#da262c]  flex-between text-[65px] tracking-[.08px] duration-200 transition-colors ${
+        className={`w-full leading-[1.3]  hover:text-[#da262c]  flex-between text-[55px] sm:text-[65px] tracking-[.08px] duration-200 transition-colors ${
           isActive ? 'text-[#da262c]' : ''
         }`}
       >
@@ -46,23 +60,7 @@ const MenuLink = ({ href, title, index, onClick, isActive }) => (
     </div>
 
 )
-// const MenuLink = ({ href, title, index, onClick, isActive }) => (
-//   <div className="flex line-box flex-col gap-1">
-//     <Link
-//       href={href}
-//       onClick={onClick}
-//       className={`w-full  hover:text-[#da262c] font-Archivo flex-between text-[40px] tracking-[.08px] duration-200 transition-colors ${
-//         isActive ? 'text-[#da262c]' : ''
-//       }`}
-//     >
-//       {title}
-//       <span className="font-RightGrotesk num text-[18px] opacity-80">0
-//         {String(index + 1).padStart(2, '0')}
-//       </span>
-//     </Link>
-//     <div className="w-full line relative h-[0.5px] bg-[#d4d4d4]" />
-//   </div>
-// )
+
 
 // Desktop Nav Link Component
 const DesktopNavLink = ({ href, title, isActive }) => (
@@ -197,10 +195,11 @@ const Header = () => {
             animate="open"
             exit="closed"
             variants={menuVariants}
-            className="fixed inset-0 overflow-hidden mx-auto px-5 sm:px-6 hidden max-md:grid grid-rows-[1fr_auto] pt-[120px] pb-6 top-0 left-0 w-screen h-screen bg-[#efefef] z-[500]"
+            className="fixed inset-0 duration-300 ease-in-out overflow-hidden mx-auto px-5 sm:px-6 hidden max-md:grid grid-rows-[1fr_auto] pt-[120px] sm:pb-6 pb-7 top-0 left-0 w-screen h-svh bg-[#efefef] z-[500]"
           >
             <div className='flex w-fit flex-col gap-8'>
-              <p className='uppercase  flex items-center gap-3 font-Archivo font-semibold  text-[12px]'><span className='w-[4px] h-[4.5px] relative -top-[1px] bg-black'/>Discover</p>
+              {/* <p className='uppercase  flex items-center gap-3 font-Archivo font-semibold  text-[12.5px]'><span className='w-[4px] h-[4.5px] relative -top-[1px] bg-black'/>Discover</p> */}
+              <SectionTitle>Discover</SectionTitle>
               <div className='flex flex-col gap-4'>
                 {NavLinks.map((link, index) => (
                   <MenuLink
@@ -216,9 +215,10 @@ const Header = () => {
             </div>
 
             <div className='flex flex-col gap-6'>
-                <p className='uppercase  flex items-center gap-3 font-Archivo font-semibold  text-[12px]'><span className='w-[4px] h-[4.5px] relative -top-[1px] bg-black'/> <span className='leading-[1.2] w-fit'>Socials</span></p>
 
-                <div className="flex items-center gap-4">
+                <SectionTitle>Socials</SectionTitle>
+
+                {/* <div className="flex items-center gap-4">
                     
                     {
                       Socials.map((social, i) => (
@@ -232,6 +232,16 @@ const Header = () => {
                       ))
                     }
 
+                </div> */}
+                <div className="grid grid-cols-2 text-[17px] font-[550] font-Archivo leading-[1.2] flex-col gap-[1px]">
+                  {Socials.map((link, index) => (
+                    <Link key={index} 
+                    href={link.url} target='_blank' className="flex gap-1 items-center">
+
+                      {link.title} 
+                      <TfiArrowTopRight className='text-[10px]' />
+                    </Link>
+                  ))}
                 </div>
 
 
@@ -239,29 +249,7 @@ const Header = () => {
           </motion.div>
         )}
       </AnimatePresence>
-      {/* <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
-            initial="closed"
-            animate="open"
-            exit="closed"
-            variants={menuVariants}
-            className="fixed inset-0 overflow-hidden mx-auto px-7 hidden max-md:flex flex-col gap-9 pt-[180px] left-0 w-full h-screen bg-[#efefef] z-[500]"
-          >
-            {NavLinks.map((link, index) => (
-              <MenuLink
-                key={index}
-                href={link.url}
-                title={link.title}
-                index={index}
-                onClick={closeMenu}
-                isActive={pathname === link.url}
-              />
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence> */}
-
+      
       {/* Hidden Audio Element */}
       <audio ref={audioRef} src="/music/intro2.mp3" loop />
     </>
@@ -271,14 +259,3 @@ const Header = () => {
 export default Header
 
 
-
-{/* <TfiArrowTopRight className='text-[10px]' /> */}
-
-{/* <>
-                          <Link className='font-Archivo overflow-hidden link-wrapper h-[18px] text-[14.5px]' target='_blank' href={social.url}>
-                              <span className="link-text relative -top-[2px]">{social.title}</span>
-                              <span className="link-text-clone mt-[1.5px] ">{social.title}</span>
-                          </Link>
-
-                          
-                        </> */}
