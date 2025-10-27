@@ -138,7 +138,7 @@ img {
   }
 
   .flex-size{
-    @apply max-w-[1670px] px-6 mx-auto w-full 
+    @apply max-w-[1670px] px-5 sm:px-6 mx-auto w-full 
   }
   
   .flex-center {

@@ -30,12 +30,12 @@ const Projects = () => {
         <div className=' pb-[90px] w-full flex flex-col gap-7 '>
             
             <h1  className='md:text-[min(8vw,200px)] text-[50px] col-span-1 leading-[.9]  text-[#11120d]   font-bold uppercase'> Selected Projects <span className='text-[14px] text-nowrap pr-2 tracking-wide  font-Archivo '> 2023 — 2025 </span></h1>
-            <p className='h-fit w-[400px]  font-Archivo text-xs text-justify  '><span className='font-Archivo font-[900]'>//</span> Each project is a fragment of exploration — a dialogue between design, code, and emotion. Together, they tell the story of a creative process that never stands still.</p>
+            <p className='h-fit sm:w-[400px]  font-Archivo text-xs text-justify  '><span className='font-Archivo font-[900]'>//</span> Each project is a fragment of exploration — a dialogue between design, code, and emotion. Together, they tell the story of a creative process that never stands still.</p>
         </div>
 
 
           <div className="flex h-fit w-full pb-4 border-b-[#1d1d1d]/40 border-b-[.5px] pt-2 uppercase font-Archivo font-[900] text-sm items-center gap-1"> <span className='size-2 rounded-full  bg-[#1d1d1d]'/> Logo collections</div>
-        <div className="w-full mx-auto pt-8 gap-5 grid md:grid-cols-2 lg:grid-cols-3">
+        <div className="w-full mx-auto pt-8 gap-6 grid md:grid-cols-2 lg:grid-cols-3">
           {
               ProjectData.map((item, i) => {
                 const {title, file, tags, imgWidth} = item 

@@ -1,11 +1,12 @@
 import Lenzone from '@/public/Project_Assets/Lenzone.svg'
 import BeProd from '@/public/Project_Assets/BePiontProd.svg'
 import outloud from '@/public/Project_Assets/outloud.svg'
-import Megasoft from '@/public/Project_Assets/Megasoft.svg'
+import Megasoft from '@/public/Project_Assets/Megasoft_2.svg'
 import Studyo from '@/public/Project_Assets/Studyo.svg'
 import Artflow from '@/public/Project_Assets/Artflow.svg'
 import Carrot from '@/public/Project_Assets/Carrot.svg'
 import DripppStudio from '@/public/Project_Assets/DripppStudio.svg'
+import HMS_Proprete from '@/public/Project_Assets/HMS_Proprete.svg'
 
 
 export const NavLinks = [
@@ -27,6 +28,25 @@ export const NavLinks = [
     }
 ]
 
+export const Socials = [
+    {
+        title: 'Linkedin',
+        url: 'https://www.linkedin.com/in/mounir-lagzouli/',
+    },
+    {
+        title: 'Email',
+        url: 'mailto:mounirlagzouli22@gmail.com',
+    },
+    {
+        title: 'Instagram',
+        url: 'https://www.instagram.com/mounir_lagzouli01/',
+    },
+    {
+        title: 'Whatsapp',
+        url: 'https://wa.me/212708148077',
+    },
+]
+
 
 
 
@@ -41,7 +61,7 @@ export const ProjectData = [
         title: 'Stüdyo',
         file: Studyo,
         tags: ['Logo Design', 'Chart Graphic', 'Brand Identity'],
-        imgWidth: 'w-[175px] opacity-95',
+        imgWidth: 'w-[170px] opacity-95',
     },
      {
         title: 'Artflow',
@@ -49,18 +69,20 @@ export const ProjectData = [
         tags: ['Logo Design'],
         imgWidth: 'w-[190px] opacity-95',
     },
-    
-    {
-        title: 'OUTLOUD',
-        file: outloud,
+
+     {
+        title: 'Carrot',
+        file: Carrot,
         tags: ['Logo Design'],
-        imgWidth: 'w-[195px] opacity-95',
+        imgWidth: 'w-[215px]',
     },
+    
+    
     {
         title: 'Be Point Prod',
         file: BeProd,
         tags: ['Logo Design', 'Business Card'],
-        imgWidth: 'w-[190px]',
+        imgWidth: 'w-[185px]',
     },
     {
         title: 'Megasoft',
@@ -68,11 +90,19 @@ export const ProjectData = [
         tags: ['Logo Design', 'Brand Identity'],
         imgWidth: 'w-[270px] opacity-95',
     },
+
     {
-        title: 'Carrot',
-        file: Carrot,
+        title: 'OUTLOUD',
+        file: outloud,
         tags: ['Logo Design'],
-        imgWidth: 'w-[220px]',
+        imgWidth: 'w-[185px] opacity-95',
+    },
+   
+    {
+        title: 'HMS Proprete',
+        file: HMS_Proprete,
+        tags: ['Logo Design'],
+        imgWidth: 'w-[230px] opacity-90',
     },
     {
         title: 'Drippp Studio',
