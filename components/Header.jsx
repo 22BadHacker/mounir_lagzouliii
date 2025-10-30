@@ -217,26 +217,10 @@ const Header = () => {
             <div className='flex flex-col gap-6'>
 
                 <SectionTitle>Socials</SectionTitle>
-
-                {/* <div className="flex items-center gap-4">
-                    
-                    {
-                      Socials.map((social, i) => (
-                        <>
-                          <Link className=' hover:text-primary flex gap-1 items-center text-[14.5px]' target='_blank' href={social.url}>
-                              {social.title} <TfiArrowTopRight className='text-[10px]' />
-                          </Link>
-
-                          
-                        </>
-                      ))
-                    }
-
-                </div> */}
                 <div className="grid grid-cols-2 text-[17px] font-[550] font-Archivo leading-[1.2] flex-col gap-[1px]">
                   {Socials.map((link, index) => (
                     <Link key={index} 
-                    href={link.url} target='_blank' className="flex gap-1 items-center">
+                    href={link.url} target='_blank' className="flex hover:underline duration-200 ease-in-out gap-1 items-center">
 
                       {link.title} 
                       <TfiArrowTopRight className='text-[10px]' />

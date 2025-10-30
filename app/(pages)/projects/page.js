@@ -8,7 +8,6 @@ export const metadata = {
 const page = () => {
   return (
     <div className='flex-size w-full pb-30 pt-34'>
-      {/* <div class="fixed inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:20px_24px]"></div> */}
         <Projects />
         
     </div>

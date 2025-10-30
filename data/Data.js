@@ -12,7 +12,7 @@ import HMS_Proprete from '@/public/Project_Assets/HMS_Proprete.svg'
 export const NavLinks = [
     {
         title: 'About',
-        url: '/'
+        url: '/about'
     },
     {
         title: 'Projects',

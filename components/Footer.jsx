@@ -68,7 +68,8 @@ const Footer = () => {
         </h1>
         
         <div className='sm:text-[20px] text-[18px] text-[#151515] max-w-[350px] leading-[1.05] font-RightGrotesk'>
-          <span className='bg-[#151515] rounded-full size-[8px] mb-[1.5px] mx-2 inline-flex' />
+          <span className=' relative rounded-full size-[20px] top-1  mb-[2px] mx-1 inline-flex' ><svg className='w-full left-1/2 absolute top-1/2 -translate-x-1/2 -translate-y-1/2 ' fill="#1d1d1d" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="0"><animate id="spinner_0Nme" begin="0;spinner_ITag.begin+0.4s" attributeName="r" calcMode="spline" dur="1.2s" values="0;11" keySplines=".52,.6,.25,.99" fill="freeze"/><animate begin="0;spinner_ITag.begin+0.4s" attributeName="opacity" calcMode="spline" dur="1.2s" values="1;0" keySplines=".52,.6,.25,.99" fill="freeze"/></circle><circle cx="12" cy="12" r="0"><animate id="spinner_f83A" begin="spinner_0Nme.begin+0.4s" attributeName="r" calcMode="spline" dur="1.2s" values="0;11" keySplines=".52,.6,.25,.99" fill="freeze"/><animate begin="spinner_0Nme.begin+0.4s" attributeName="opacity" calcMode="spline" dur="1.2s" values="1;0" keySplines=".52,.6,.25,.99" fill="freeze"/></circle><circle cx="12" cy="12" r="0"><animate id="spinner_ITag" begin="spinner_0Nme.begin+0.8s" attributeName="r" calcMode="spline" dur="1.2s" values="0;11" keySplines=".52,.6,.25,.99" fill="freeze"/><animate begin="spinner_0Nme.begin+0.8s" attributeName="opacity" calcMode="spline" dur="1.2s" values="1;0" keySplines=".52,.6,.25,.99" fill="freeze"/></circle></svg></span>
+          
           Ready to elevate your brand?
           <br /> 
           <span className='text-[#c4c4c5]'>
@@ -116,7 +117,7 @@ const Footer = () => {
             className="flex text-[15px] font-[450] group font-Archivo uppercase cursor-pointer items-center gap-3"
           >
             Back To Top
-            <span className='sm:size-[62px] size-[55px] duration-200 ease-in-out shadow-xs group-hover:bg-[#c4c4c5]/40 text-[#11120d]/80 border-[1.5px] border-[#c4c4c5]/40 rounded-full flex-center'>
+            <span className='sm:size-[60px] size-[55px] duration-200 ease-in-out  group-hover:bg-[#1d1d1d] group-hover:text-gray-100 text-[#11120d]/80 border-[1.5px] border-[#c4c4c5]/40 rounded-full flex-center'>
               <TfiArrowUp size={20} />
             </span>
           </div>
