@@ -100,7 +100,7 @@ const HeaderLogo = () => (
       src={Logo} 
       width={100} 
       height={100} 
-      className="w-[170px] relative top-[-.8px] link-text"
+      className="w-[170px] relative top-[0px] link-text"
       priority
     />
     <Image 

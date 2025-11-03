@@ -47,14 +47,23 @@ const Projects = () => {
   return (
     <div className='flex  w-full h-auto flex-col'>
 
-        <div className=' pb-[90px] w-full flex flex-col gap-7 '>
+        <div className=' pb-[90px] w-full flex flex-col gap-8 '>
             
             <h1  className='md:text-[min(8.5vw,200px)] text-[50px] font-RightGrotesk col-span-1 leading-[.8]  text-[#11120d]   font-bold uppercase'> Selected Projects  <span className='text-[14px] text-nowrap pr-2 tracking-wide leading-[1] font-semibold font-RightGrotesk '> [ 2023 — 2025 ]</span></h1>
-            <p className='h-fit sm:w-[400px]  font-RightGrotesk text-xs text-justify  '><span className='size-2 bg-[#1d1d1d] rounded-full inline-flex mx-1'/> Each project is a fragment of exploration — a dialogue between design, code, and emotion. Together, they tell the story of a creative process that never stands still.</p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 h-fit lg:w-[850px] gap-x-7 font-Poppins text-[10px] leading-[1.15] text-justify text-balance   flex-col md:gap-x-5 gap-y-2">
+                <p><span className='size-2 bg-[#1d1d1d] rounded-full inline-flex mx-1'/> Well, hello! Fancy meeting you here.</p>
+
+                <p> You've stumbled upon my portfolio—a curated collection of things I've built, designed, and poured my heart and soul into (and also a lot of coffee).</p>
+
+                <p> Think of this page as the "greatest hits" of my brain. Go ahead, click around. I hope something makes you smile, think, or want to collaborate.</p>
+
+                <p>P.S. If you like what you see, let's chat! If you don't... maybe keep that to yourself. (Just kidding! ...Mostly.)</p>
+            </div>
+
         </div>
 
 
-          <div className="flex  h-fit w-full  py-[6px]   uppercase font-Archivo font-[900] text-sm items-center gap-[2px]">  <span className='bg-amber-400 px-1'>Logo collections &reg;</span> <Svg /></div>
+          <div className="flex relative   h-fit w-fit  py-[6px]   uppercase font-Archivo font-[900] leading-[1.25] text-sm items-center  gap-[2px]">   <span className='bg-[#11120d] text-gray-100 italic px-[3px]'>Logo collections &reg;</span> <Svg /></div>
         <div className="w-full mx-auto pt-8 gap-3 grid md:grid-cols-2 lg:grid-cols-3">
           {
               ProjectData.map((item, i) => {

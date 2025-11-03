@@ -24,17 +24,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} h-auto w-full z-10  ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} min-h-svh w-full overflow-x-hidden  ${geistMono.variable} antialiased`}
       >
         <SpeedInsights />
         <LenisWrapper>
           <Header />
           {children}
-          <footer style={{clipPath: 'polygon(0% 0, 100% 0%, 100% 100%, 0% 100%)'}} className="w-full  flex h-svh relative ">
+          {/* <footer style={{clipPath: 'polygon(0% 0, 100% 0%, 100% 100%, 0% 100%)'}} className="w-full  flex h-svh relative ">
             <div className="fixed flex bottom-0 w-full h-auto">
                 <Footer />
             </div>
-          </footer>
+          </footer> */}
         </LenisWrapper>
       </body>
     </html>
