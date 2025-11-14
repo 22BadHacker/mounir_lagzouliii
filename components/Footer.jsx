@@ -62,10 +62,13 @@ const Footer = () => {
   return (
     <footer className='flex-size  h-full items-center  pt-[120px]  pb-6 w-full overflow-hidden'>
       {/* Main Heading Section */}
-      <div className="flex pb-10 flex-col gap-4">
-        <h1 className='tracking-[-0.025em]  lg:text-[120px]  md:text-[calc(12.5vw-10px)] lg:max-w-[800px] md:max-w-[77vw] sm:text-[calc(15vw-10px)] text-[calc(15vw-10px)]  max-w-[100vw] uppercase leading-[.74] font-Archivo font-[900] text-left text-[#151515]'>
-          let's bring your ideas to life ®
+      <div className="flex pb-9 flex-col gap-4">
+        <h1 className='tracking-[-0.05em]   lg:text-[110px]  md:text-[calc(11vw-10px)] lg:max-w-[900px] md:max-w-[77vw] sm:text-[calc(13vw-10px)] text-[calc(13.8vw-10px)]  max-w-[100vw] uppercase leading-[.714]  font-Archivo font-[900] text-left text-[#151515]'>
+          Let’s Bring YOUR VISIONS to REAL Life ®
         </h1>
+        {/* <h1 className='tracking-[-0.05em]   lg:text-[120px]  md:text-[calc(12.5vw-10px)] lg:max-w-[800px] md:max-w-[77vw] sm:text-[calc(15vw-10px)] text-[calc(15vw-10px)]  max-w-[100vw] uppercase leading-[.71]  font-Archivo font-[900] text-left text-[#151515]'>
+          let's bring your ideas to life ®
+        </h1> */}
         
         <div className='sm:text-[19px] text-[18px] text-[#151515] max-w-[350px] leading-[1.05] font-RightGrotesk'>
           <span className=' relative rounded-full size-[18px] top-1  mb-[2px] mx-1 inline-flex' ><svg className='w-full left-1/2 absolute top-1/2 -translate-x-1/2 -translate-y-1/2 ' fill="#1d1d1d" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="0"><animate id="spinner_0Nme" begin="0;spinner_ITag.begin+0.4s" attributeName="r" calcMode="spline" dur="1.2s" values="0;11" keySplines=".52,.6,.25,.99" fill="freeze"/><animate begin="0;spinner_ITag.begin+0.4s" attributeName="opacity" calcMode="spline" dur="1.2s" values="1;0" keySplines=".52,.6,.25,.99" fill="freeze"/></circle><circle cx="12" cy="12" r="0"><animate id="spinner_f83A" begin="spinner_0Nme.begin+0.4s" attributeName="r" calcMode="spline" dur="1.2s" values="0;11" keySplines=".52,.6,.25,.99" fill="freeze"/><animate begin="spinner_0Nme.begin+0.4s" attributeName="opacity" calcMode="spline" dur="1.2s" values="1;0" keySplines=".52,.6,.25,.99" fill="freeze"/></circle><circle cx="12" cy="12" r="0"><animate id="spinner_ITag" begin="spinner_0Nme.begin+0.8s" attributeName="r" calcMode="spline" dur="1.2s" values="0;11" keySplines=".52,.6,.25,.99" fill="freeze"/><animate begin="spinner_0Nme.begin+0.8s" attributeName="opacity" calcMode="spline" dur="1.2s" values="1;0" keySplines=".52,.6,.25,.99" fill="freeze"/></circle></svg></span>

@@ -5,10 +5,12 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { FaPlay, FaPause } from "react-icons/fa6"
 import { AnimatePresence, motion } from 'framer-motion'
+// import Logo from '@/public/Logo/mounir_lagzouli1.svg'
 import Logo from '@/public/Logo/Mounir_Lagzouli_1.svg'
-import LogoRed from '@/public/Logo/Mounir_Lagzouli_Red.svg'
+import LogoRed from '@/public/Logo/Mounir_Lagzouli_gray.svg'
 import { NavLinks, Socials } from '@/data/Data'
 import { TfiArrowTopRight } from "react-icons/tfi";
+import ContactWindow from './ContactWindow'
 
 
 const SectionTitle = ({ children }) => (
@@ -44,14 +46,14 @@ const MusicPlayer = ({ isPlaying, onToggle }) => (
 const MenuLink = ({ href, title, index, onClick, isActive }) => (
 
     <div className="flex flex-col">
-       <span className="font-Archivo flex gap-[4px] italic items-center tracking-wide num text-[9.5px] opacity-80"><span className='size-[3px] relative -top-[1px] bg-black'/>[00 - 
+       <span className="font-Poppins flex gap-[4px] italic items-center tracking-wide num text-[9.5px] opacity-80"><span className='size-[3.5px] relative -top-[1px] bg-black'/>[00 - 
           {String(index + 1).padStart(2, '0')}]
         </span>
       <Link
         href={href}
         onClick={onClick}
-        className={`w-full leading-[1.3]  hover:text-[#da262c]  flex-between text-[55px] sm:text-[65px] tracking-[.08px] duration-200 transition-colors ${
-          isActive ? 'text-[#da262c]' : ''
+        className={`w-full leading-[1.3]  hover:text-[#c4c4c5]  flex-between text-[55px] sm:text-[65px] tracking-[.08px] duration-300 ease-in-out transition-colors ${
+          isActive ? 'text-[#c4c4c5]' : ''
         }`}
       >
         {title}
@@ -66,8 +68,8 @@ const MenuLink = ({ href, title, index, onClick, isActive }) => (
 const DesktopNavLink = ({ href, title, isActive }) => (
   <Link 
     href={href} 
-    className={`link-wrapper  px-[.5px] text-[12.5px] font-Archivo font-[450]   tracking-[0px] h-[16px] hover:text-primary ${
-      isActive ? 'text-primary' : ''
+    className={`link-wrapper hover:text-[#b1b1b1] px-[.5px] text-[12.5px] font-Archivo font-[450]   tracking-[0px] h-[16px]  ${
+      isActive ? 'text-[#b1b1b1]' : ''
     }`}
   >
     
@@ -81,7 +83,7 @@ const MobileMenuToggle = ({ isMenuOpen, onToggle }) => (
   <button
     onClick={onToggle}
     aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-    className="link-wrapper cursor-pointer text-[14px] tracking-[.08px] h-[20px] hover:text-primary"
+    className="link-wrapper cursor-pointer text-[14px] tracking-[.08px] h-[20px] hover:text-[#b1b1b1]"
   >
     <span className="link-text relative -top-[0.5px]">
       {isMenuOpen ? 'Close' : 'Menu'}
@@ -94,13 +96,13 @@ const MobileMenuToggle = ({ isMenuOpen, onToggle }) => (
 
 // Logo Component
 const HeaderLogo = () => (
-  <Link href="/" className="h-[18px]  link-wrapper">
+  <Link href="/" className="h-[18px] fixed   link-wrapper">
     <Image 
       alt="Mounir Lagzouli" 
       src={Logo} 
       width={100} 
       height={100} 
-      className="w-[170px] relative top-[0px] link-text"
+      className="w-[170px]  relative top-[0px] link-text "
       priority
     />
     <Image 
@@ -118,6 +120,8 @@ const Header = () => {
   const audioRef = useRef(null)
   const [isPlaying, setIsPlaying] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [open, setOpen] = useState(false)
+  
   const pathname = usePathname()
 
   const toggleMusic = useCallback(() => {
@@ -162,10 +166,12 @@ const Header = () => {
 
   return (
     <>
-      <header className="py-[20px] transition-all duration-400 ease-in-out fixed top-0 left-0 right-0 w-full z-[999] max-w-[1670px] px-5 sm:px-6 mx-auto flex-between">
+      <header className="py-[20px]  transition-all duration-400 ease-in-out fixed top-0 left-0 right-0 w-full z-[999] max-w-[1670px] px-5 sm:px-6 mx-auto flex-between">
+        
+        
         <HeaderLogo />
         
-        <nav className="flex-center  transition-all duration-400 ease-in-out font-light bg-[#fff]/80 backdrop-blur-[5px]  max-md:w-[115px] max-md:gap-[20px] w-fit py-[5.5px] pl-[5.5] pr-[10px] gap-[19px]">
+        <nav className="flex-center   transition-all duration-400 ease-in-out font-light bg-[#fff]/70 backdrop-blur-[6px]  max-md:w-[115px] max-md:gap-[20px] w-fit py-[5.5px] pl-[5.5] pr-[10px] gap-[19px]">
           <MusicPlayer isPlaying={isPlaying} onToggle={toggleMusic} />
           
           {/* Mobile Menu Toggle */}
@@ -174,7 +180,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="max-md:hidden gap-[20px] flex-center">
+          <div className="max-md:hidden gap-[22px] flex-center">
             {NavLinks.map((link, index) => (
               <DesktopNavLink 
                 key={index} 
@@ -183,6 +189,7 @@ const Header = () => {
                 isActive={pathname === link.url}
               />
             ))}
+           {/* <ContactWindow close={()=>setOpen(false)} open={()=>setOpen(!open)} /> */}
           </div>
         </nav>
       </header>
@@ -233,6 +240,8 @@ const Header = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
+      
       
       {/* Hidden Audio Element */}
       <audio ref={audioRef} src="/music/intro2.mp3" loop />

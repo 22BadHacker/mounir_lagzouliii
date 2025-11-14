@@ -55,7 +55,7 @@ export const ProjectData = [
         title: 'Lenzóne Studio',
         file: Lenzone,
         tags: ['Branding', 'Logo Design', 'Chart Graphic'],
-        imgWidth: 'w-[225px]',
+        imgWidth: 'w-[225px] ',
     },
      {
         title: 'Stüdyo',

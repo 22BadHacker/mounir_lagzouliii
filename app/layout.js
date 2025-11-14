@@ -4,6 +4,9 @@ import LenisWrapper from "@/components/LenisWrapper";
 import Header from "../components/Header";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Footer from "../components/Footer";
+import CustomCursor from "@/components/CustomCursor";
+import Preloader from "@/components/Preloader";
+import ContactWindow from "@/components/ContactWindow";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,17 +27,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} min-h-svh w-full overflow-x-hidden  ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable}  min-h-svh w-full overflow-x-hidden  ${geistMono.variable} antialiased`}
       >
         <SpeedInsights />
         <LenisWrapper>
-          <Header />
-          {children}
-          {/* <footer style={{clipPath: 'polygon(0% 0, 100% 0%, 100% 100%, 0% 100%)'}} className="w-full  flex h-svh relative ">
-            <div className="fixed flex bottom-0 w-full h-auto">
-                <Footer />
-            </div>
-          </footer> */}
+          {/* <CustomCursor /> */}
+          <Preloader>
+            <Header />
+            {children}
+          </Preloader>
+          {/* <ContactWindow /> */}
         </LenisWrapper>
       </body>
     </html>
@@ -42,3 +44,5 @@ export default function RootLayout({ children }) {
 }
 
 // —
+
+// cursor-none
