@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image'
-import Logo from '@/public/Logo/Mounir_Lagzouli_gray.svg'
+import Logo from '@/public/Logo/Mounir_Lagzouli_1.svg'
 
 export default function Preloader({ children }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -22,7 +22,7 @@ export default function Preloader({ children }) {
         {isLoading ? (
           <motion.div
             key="preloader"
-            className="fixed inset-0 bg-[#141414] z-50 flex items-center justify-center"
+            className="fixed inset-0 bg-[#efefef] z-50 flex items-center justify-center"
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5, ease: 'easeInOut' }}
@@ -38,11 +38,11 @@ export default function Preloader({ children }) {
               
 
               <motion.span 
-              className="mix-blend-lighten"
+              className=""
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}>
-                    <Image alt='logo' src={Logo} className='size-[240px]  mix-blend-difference' width={100} height={100}/>
+                    <Image alt='logo' src={Logo} className='size-[240px]' width={100} height={100}/>
 
               </motion.span>
 

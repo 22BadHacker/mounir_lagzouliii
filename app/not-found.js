@@ -32,16 +32,16 @@ const HeaderLogo = () => (
 export default function Custom404() {
   return (
     <div className="min-h-svh px-5 sm:px-6 py-[20px] relative flex-size flex items-center justify-center">
-      <div className="absolute top-[31px] left-5">
+      <div className="fixed top-[31px] left-5">
         <HeaderLogo />
       </div>
 
       <div className="text-center z-10 ">
-        <h1 className="md:text-[410px] text-[calc(100px+40vw)] text-[#11120d] leading-[1]  tracking-[-12px] font-Playfair mb-4">404</h1>
-        <p className="text-[16px] uppercase font-Oswald font-[300] ">The Page you are looking for does not exist or another error occurred.</p>
+        <h1 className="md:text-[410px] w-full text-center text-[54vw] sm:text-[calc(100px+40vw)] text-[#11120d] leading-[1]  tracking-[-12px] font-Playfair mb-4">404</h1>
+        <p className="sm:text-[16px] text-sm uppercase font-Oswald font-[300] ">The Page you are looking for does not exist or another error occurred.</p>
         <Link
           href="/"
-          className="uppercase  w-fit pb-[2px] group inline-block relative font-Oswald font-semibold text-[16px] hover:text-black"
+          className="uppercase pt-1 sm:pt-0  w-fit pb-[2px] group inline-block relative font-Oswald font-semibold sm:text-[16px] text-sm hover:text-black"
         >
           Return home
 
