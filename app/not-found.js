@@ -1,17 +1,44 @@
 import Link from "next/link";
+import Logo from '@/public/Logo/Mounir_Lagzouli_1.svg'
+import LogoRed from '@/public/Logo/Mounir_Lagzouli_gray.svg'
+import Image from 'next/image'
 
 export const metadata = {
   title: '𝟰𝟬𝟰 — Page Not Found',
   description: 'The page you are looking for does not exist.',
 };
 
+const HeaderLogo = () => (
+  <Link href="/" className="h-[18px] fixed   link-wrapper">
+    <Image 
+      alt="Mounir Lagzouli" 
+      src={Logo} 
+      width={100} 
+      height={100} 
+      className="w-[170px]  relative top-[0px] link-text "
+      priority
+    />
+    <Image 
+      alt="Mounir Lagzouli" 
+      src={LogoRed} 
+      width={100} 
+      height={100} 
+      className="w-[170px]  pb-[4px] link-text-clone"
+      priority
+    />
+  </Link>
+)
+
 export default function Custom404() {
   return (
-    <div className="min-h-svh flex-size flex items-center justify-center">
-       
+    <div className="min-h-svh px-5 sm:px-6 py-[20px] relative flex-size flex items-center justify-center">
+      <div className="absolute top-[31px] left-5">
+        <HeaderLogo />
+      </div>
+
       <div className="text-center z-10 ">
         <h1 className="md:text-[410px] text-[calc(100px+40vw)] text-[#11120d] leading-[1]  tracking-[-12px] font-Playfair mb-4">404</h1>
-        <p className="text-[16px] uppercase font-Oswald font-[300] ">The Page you are looking for doesn't exist or another error occurred.</p>
+        <p className="text-[16px] uppercase font-Oswald font-[300] ">The Page you are looking for does not exist or another error occurred.</p>
         <Link
           href="/"
           className="uppercase  w-fit pb-[2px] group inline-block relative font-Oswald font-semibold text-[16px] hover:text-black"

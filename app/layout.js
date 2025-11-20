@@ -5,8 +5,7 @@ import Header from "../components/Header";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Footer from "../components/Footer";
 import CustomCursor from "@/components/CustomCursor";
-import Preloader from "@/components/Preloader";
-import ContactWindow from "@/components/ContactWindow";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,11 +31,8 @@ export default function RootLayout({ children }) {
         <SpeedInsights />
         <LenisWrapper>
           {/* <CustomCursor /> */}
-          <Preloader>
-            <Header />
+            {/* <Header /> */}
             {children}
-          </Preloader>
-          {/* <ContactWindow /> */}
         </LenisWrapper>
       </body>
     </html>
