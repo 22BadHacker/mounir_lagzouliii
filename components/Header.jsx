@@ -205,9 +205,8 @@ const Header = () => {
             className="fixed inset-0 duration-300 ease-in-out overflow-hidden mx-auto px-5 sm:px-6 hidden max-md:grid grid-rows-[1fr_auto] pt-[120px] sm:pb-6 pb-7 top-0 left-0 w-screen h-svh bg-[#efefef] z-[500]"
           >
             <div className='flex w-fit flex-col gap-8'>
-              {/* <p className='uppercase  flex items-center gap-3 font-Archivo font-semibold  text-[12.5px]'><span className='w-[4px] h-[4.5px] relative -top-[1px] bg-black'/>Discover</p> */}
               <SectionTitle>Discover</SectionTitle>
-              <div className='flex flex-col gap-4'>
+              <div className='flex flex-col gap-3 xs:gap-4'>
                 {NavLinks.map((link, index) => (
                   <MenuLink
                     key={index}
