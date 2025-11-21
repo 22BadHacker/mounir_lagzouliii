@@ -15,7 +15,7 @@ const page = () => {
                     <video src='/image/hero.mp4'  autoPlay loop muted className='w-[240px] h-[390px] saturate-[1.2] object-cover'/>
                 </div>
             </div>
-        <div className="h-auto flex flex-col gap-6 pt-20 pb-11 w-full min-h-svh z-[2] relative ">
+        {/* <div className="h-auto flex flex-col gap-6 pt-20 pb-11 w-full min-h-svh z-[2] relative ">
             <div className="flex font-Poppins w-full justify-between">
                 <p className='text-xs'>Recent Projects</p>
                 <p className='text-xs flex items-center gap-1'>See more <LiaLongArrowAltRightSolid size={16} /></p>
@@ -26,7 +26,7 @@ const page = () => {
                 </div>
 
             
-        </div>
+        </div> */}
 
 
         {/* <div className="h-screen"></div> */}
