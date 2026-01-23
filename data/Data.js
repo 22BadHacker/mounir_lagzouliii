@@ -20,11 +20,11 @@ export const NavLinks = [
     },
     {
         title: 'Capabilities',
-        url: '/Capabilities'
+        url: '/capabilities'
     },
     {
         title: 'Contact',
-        url: '/contact'
+        url: 'mailto:mounirlagzouli22@gmail.com'
     }
 ]
 

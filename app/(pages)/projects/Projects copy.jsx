@@ -5,7 +5,6 @@ import Image from 'next/image'
 import { motion } from 'framer-motion';
 import Svg from '@/components/Svg';
 import Texture from '@/public/image/texture2.webp'
-import { LiaPlusSolid } from "react-icons/lia";
 
 
 const Border = () => (
@@ -33,7 +32,7 @@ const Projects = () => {
 
         <div className=' pb-[90px] w-full flex flex-col gap-8 '>
             
-            <h1  className='md:text-[min(8.65vw,200px)] text-[50px] font-RightGrotesk col-span-1 leading-[.8]  text-[#11120d]/95   font-bold uppercase'> Selected Projects  <span className='text-[14px] text-nowrap pr-2 tracking-wide leading-[1]  font-semibold font-Archivo '> [ 2023 — 2025 ]</span></h1>
+            <h1  className='md:text-[min(8.5vw,200px)] text-[50px] font-Oswald col-span-1 leading-[.8]  text-[#11120d]/95   font-bold uppercase'> Selected Projects  <span className='text-[14px] text-nowrap pr-2 tracking-wide leading-[1] font-semibold font-RightGrotesk '> [ 2023 — 2025 ]</span></h1>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 h-fit lg:w-[850px] gap-x-7 font-Poppins text-[10px] leading-[1.15] text-justify text-balance   flex-col md:gap-x-5 gap-y-2">
                 <p className='relative'> <span className='size-2 bg-[#1d1d1d] rounded-full inline-flex mx-1'/> Well, hello! Fancy meeting you here.</p>
 
@@ -49,16 +48,17 @@ const Projects = () => {
 
           {/* <div className="flex relative  tracking-tight  h-fit w-fit  py-[6px]   uppercase font-Archivo font-[900] leading-[1.25] text-sm items-center  gap-[2px]">   <span className='bg-[#11120d]  text-gray-50 italic px-[3px]'>Logo collections &reg;</span> <Svg /></div> */}
 
-          <div className="w-full  pt-10  flex justify-between">
-              <div className="">
-                  <p className='text-[40px] font-[450] font-Archivo'>All Work <span className='font-Archivo text-[20px] align-text-top'>(20)</span></p>
-              </div>
+          <div className="w-full sticky top-20 z-10 mix-blend-difference text-white flex justify-end">
 
-              <div className="flex text-[#cacfcb] text-[40px] font-[450] font-Archivo items-center  gap-5">
-                  <p className=''>Filters</p>
-                  <LiaPlusSolid size={36}/>
-              </div>
-         
+          <div className="flex items-center gap-3 max-w-[700px] flex-wrap ">
+              <button className='text-[20px] font-Poppins font-semibold  '>All Work <span className='font-Oswald font-bold'>,</span></button>
+              {/* <span className=' h-[20px] w-[1.5px] rotate-12  bg-black/90'/> */}
+              <button className='text-[20px] px-1 font-Poppins relative font-semibold  text-[#7f7f7f]'>Brand Identity <span className='absolute font-Archivo -top-[1px] right-[0px] text-[10px]'>(5)</span><span className='font-Oswald font-bold '>,</span></button>
+              {/* <span className=' h-[20px] w-[1.5px] rotate-12  bg-black/90'/> */}
+              <button className='text-[20px] font-Poppins font-semibold  text-[#7f7f7f]'>Logo Design <span className='font-Oswald font-bold'>,</span></button>
+              {/* <span className=' h-[20px] w-[1.5px] rotate-12  bg-black/90'/> */}
+              <button className='text-[20px] font-Poppins font-semibold  text-[#7f7f7f]'>Websites</button>
+          </div>
           </div>
 
         <div className="w-full mx-auto pt-8 gap-3 grid md:grid-cols-2 lg:grid-cols-3">

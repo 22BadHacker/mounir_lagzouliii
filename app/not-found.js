@@ -2,6 +2,7 @@ import Link from "next/link";
 import Logo from '@/public/Logo/Mounir_Lagzouli_1.svg'
 import LogoRed from '@/public/Logo/Mounir_Lagzouli_gray.svg'
 import Image from 'next/image'
+import Header from "@/components/Header";
 
 export const metadata = {
   title: '𝟰𝟬𝟰 — Page Not Found',
@@ -31,10 +32,11 @@ const HeaderLogo = () => (
 
 export default function Custom404() {
   return (
-    <div className="min-h-svh px-5 sm:px-6 py-[20px] relative flex-size flex items-center justify-center">
-      <div className="fixed top-[31px] left-5">
+    <div className="min-h-svh px-5 sm:px-6 py-[20px] relative  flex items-center justify-center">
+      {/* <div className="fixed top-[31px] left-5">
         <HeaderLogo />
-      </div>
+      </div> */}
+      <Header />
 
       <div className="text-center z-10 ">
         <h1 className="md:text-[410px] w-full text-center text-[54vw] sm:text-[calc(100px+40vw)] text-[#11120d] leading-[1]  tracking-[-12px] font-Playfair mb-4">404</h1>
