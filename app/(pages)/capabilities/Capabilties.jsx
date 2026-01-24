@@ -45,7 +45,7 @@ const Capabilties = () => {
        <div className="w-full h-[0.5px] bg-[#c4c4c4]/70" />
      );
    return (
-     <div className='h-svh  flex-size w-full '>
+     <div className='h-svh min-h-screen  flex-size w-full '>
  
          <div className="  pt-29 h-full  flex gap-7 flex-col pb-8 justify-between ">
              <section className="flex flex-col gap-2">
