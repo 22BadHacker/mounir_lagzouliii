@@ -24,10 +24,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html style={{
-    scrollbarWidth: 'none',
-    msOverflowStyle: 'none',
-    }} lang="en">
+    <html  lang="en">
       <body 
         className={`${geistSans.variable} hide-scrollbar  min-h-svh w-full overflow-x-hidden  ${geistMono.variable} antialiased`}
       >
