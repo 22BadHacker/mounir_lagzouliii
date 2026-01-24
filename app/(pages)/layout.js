@@ -1,8 +1,8 @@
+import React from 'react'
 import ContactForm from '@/components/ContactForm'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import Preloader from '@/components/Preloader'
-import React from 'react'
 
 const layout = ({children}) => {
   return (

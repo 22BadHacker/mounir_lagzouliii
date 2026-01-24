@@ -1,34 +1,34 @@
 import Link from "next/link";
-import Logo from '@/public/Logo/Mounir_Lagzouli_1.svg'
-import LogoRed from '@/public/Logo/Mounir_Lagzouli_gray.svg'
 import Image from 'next/image'
 import Header from "@/components/Header";
+// import Logo from '@/public/Logo/Mounir_Lagzouli_1.svg'
+// import LogoRed from '@/public/Logo/Mounir_Lagzouli_gray.svg'
 
 export const metadata = {
   title: '𝟰𝟬𝟰 — Page Not Found',
   description: 'The page you are looking for does not exist.',
 };
 
-const HeaderLogo = () => (
-  <Link href="/" className="h-[18px] fixed   link-wrapper">
-    <Image 
-      alt="Mounir Lagzouli" 
-      src={Logo} 
-      width={100} 
-      height={100} 
-      className="w-[170px]  relative top-[0px] link-text "
-      priority
-    />
-    <Image 
-      alt="Mounir Lagzouli" 
-      src={LogoRed} 
-      width={100} 
-      height={100} 
-      className="w-[170px]  pb-[4px] link-text-clone"
-      priority
-    />
-  </Link>
-)
+// const HeaderLogo = () => (
+//   <Link href="/" className="h-[18px] fixed   link-wrapper">
+//     <Image 
+//       alt="Mounir Lagzouli" 
+//       src={Logo} 
+//       width={100} 
+//       height={100} 
+//       className="w-[170px]  relative top-[0px] link-text "
+//       priority
+//     />
+//     <Image 
+//       alt="Mounir Lagzouli" 
+//       src={LogoRed} 
+//       width={100} 
+//       height={100} 
+//       className="w-[170px]  pb-[4px] link-text-clone"
+//       priority
+//     />
+//   </Link>
+// )
 
 export default function Custom404() {
   return (
@@ -50,7 +50,7 @@ export default function Custom404() {
          <span className="absolute bottom-0 left-0 w-full h-[1px] bg-foreground scale-x-100 origin-right group-hover:scale-x-0 transition-transform duration-600 ease-in-out cursor-pointer" />
       
       {/* After line - grows after delay, stays visible */}
-      <span className="absolute bottom-0 left-0 w-full h-[1px] bg-foreground scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-600 ease-in-out group-hover:delay-600 delay-0 cursor-pointer" />
+        <span className="absolute bottom-0 left-0 w-full h-[1px] bg-foreground scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-600 ease-in-out group-hover:delay-600 delay-0 cursor-pointer" />
         </Link>
       </div>
     </div>

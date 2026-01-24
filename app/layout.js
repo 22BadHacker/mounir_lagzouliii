@@ -3,7 +3,7 @@ import "./globals.css";
 import LenisWrapper from "@/components/LenisWrapper";
 import Header from "../components/Header";
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 import CustomCursor from "@/components/CustomCursor";
 
 
@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
     <html style={{
     scrollbarWidth: 'none',
     msOverflowStyle: 'none',
-  }} lang="en">
+    }} lang="en">
       <body 
         className={`${geistSans.variable} hide-scrollbar  min-h-svh w-full overflow-x-hidden  ${geistMono.variable} antialiased`}
       >
