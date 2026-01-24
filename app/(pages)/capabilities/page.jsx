@@ -6,7 +6,7 @@ export const metadata = {
 }
 const page = () => {
   return (
-    <div className=' min-h-svh h-auto w-full pb-30'>
+    <div className=' min-h-svh h-auto w-full pb-20'>
         <Capabilities />
     </div>
   )

@@ -4,7 +4,7 @@ import phone from '@/public/image/img23.jpg'
 
 
 
-const capabilities = () => {
+const Capabilities = () => {
     const expertiseItems = [
       {
         number: '1',
@@ -88,7 +88,7 @@ const capabilities = () => {
                         key={item.category}
                         className="w-full grid grid-cols-1 gap-2 md:grid-cols-2"
                     >
-                        <h3 className="font-medium text-sm">{item.category}</h3>
+                        <h3 className="">{item.category}</h3>
                         <p className=" text-[#aeaeae] text-left md:text-right">
                         {item.tools}
                         </p>
@@ -106,4 +106,4 @@ const capabilities = () => {
   )
 }
 
-export default capabilities
+export default Capabilities
