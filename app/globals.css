@@ -89,8 +89,9 @@
 
 
 html {
-  scrollbar-width: thin;
+  scrollbar-width: none;
   scrollbar-color: #161616 transparent;
+  -ms-overflow-style: none;
 }
 
 /* ==========================================================================

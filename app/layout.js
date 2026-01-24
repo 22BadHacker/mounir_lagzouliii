@@ -42,3 +42,9 @@ export default function RootLayout({ children }) {
 // —
 
 // cursor-none
+
+
+// style={{
+//     scrollbarWidth: 'none',
+//     msOverflowStyle: 'none',
+//     }}
